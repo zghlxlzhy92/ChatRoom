@@ -1,0 +1,19 @@
+package common;
+
+import provided.datapacket.DataPacket;
+
+public class OurDataPacket<D> extends DataPacket<D, IChatServer> {
+
+	private static final long serialVersionUID = -286404109403988099L;
+	
+	/**
+	 * Constructor of OurDataPacket
+	 * @param c - An index for msg type
+	 * @param data - msg
+	 * @param sender - IChatServer
+	 */
+	public OurDataPacket(Class<D> c, D data, IChatServer sender) {
+		super(c, data, sender);
+	}
+
+}

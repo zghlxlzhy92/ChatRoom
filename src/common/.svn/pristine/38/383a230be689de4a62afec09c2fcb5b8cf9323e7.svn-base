@@ -1,0 +1,13 @@
+package common;
+
+import provided.datapacket.ADataPacketAlgoCmd;
+
+/**
+ * Here we define a more specific command type for our API implementation
+ * @param <D> - A generic type for data type held by the host
+ */
+public abstract class OurDataPacketAlgoCmd<D> extends ADataPacketAlgoCmd<String, D, IChatServer, ICmd2ModelAdapter,  OurDataPacket<D>>{
+
+	private static final long serialVersionUID = 3668264773027949186L;
+
+}

@@ -1,0 +1,16 @@
+package common.msg.chat;
+
+import common.msg.IChatMsg;
+
+/**
+ * This message is sent to all chatservers in the chatroom to notify them to remove leaving user's chatserver
+ * 
+ * Implementation advice for LeaveMsgCmd:
+ * Remove the sender from the ChatServerList of your Chatroom
+ *
+ */
+public abstract class ALeaveMsg implements IChatMsg {
+
+	private static final long serialVersionUID = 1515024863938301858L;
+
+}

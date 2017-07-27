@@ -1,0 +1,26 @@
+package common.msg.chat;
+
+import java.util.UUID;
+
+import common.msg.IChatMsg;
+
+/**
+ * INewCmdMsg interface is used to ask for a new cmd from the sender.
+ * When implementing it, you should create a index field to show the index of the cmd desired and use it to construct this object
+ * E.g. Class<?> requestClass;
+ *      INewCmdReqMsg(Class<?> rClass);
+ * Also there is a getter to get the index.
+ * @author Evita
+ * 
+ * Implementation advice for NewCmdMsgCmd:
+ * #1 Get cmd according to the index
+ * #2 Send back to the receiver a IAddCmdMsg
+ *
+ */
+public interface INewCmdReqMsg extends IChatMsg {
+
+	
+	public Class<?> getReqClassIdx();
+	
+	public UUID getUUID();
+}

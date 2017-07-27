@@ -1,0 +1,16 @@
+package common.msg.chat;
+
+import common.msg.IChatMsg;
+
+
+/**
+ * This message is sent to all chatservers in the chatroom to notify them to add new comer's chatserver
+ * 
+ * Implementation advice for JoinMsgCmd:
+ * Add the sender into the ChatServerList of your Chatroom
+ */
+public abstract class AJoinMsg implements IChatMsg {
+
+	private static final long serialVersionUID = 317148727648038584L;
+
+}

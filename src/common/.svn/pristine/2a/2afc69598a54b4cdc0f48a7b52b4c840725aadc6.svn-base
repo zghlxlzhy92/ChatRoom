@@ -1,0 +1,29 @@
+package common.msg.chat;
+
+import java.util.UUID;
+
+import common.OurDataPacketAlgoCmd;
+import common.msg.IChatMsg;
+
+/**
+ * IAddCmdMsg interface is used to send a new cmd to the receiver.
+ * When implementing it, you should create a cmd field and use it to construct this object
+ * E.g. OurDataPacketAlgoCmd<?> cmd;
+ *      MyAddCmdMsg(OurDataPacketAlgoCmd<?> myCmd);
+ * Also there is a getter to get the cmd.
+ * 
+ * Implementation advice for AddCmdMsgCmd:
+ * #1 Set the new cmd in local DataAlgo.
+ * #2 Extract the corresponding message and process it  
+ * @author Evita
+ *
+ */
+public interface IAddCmdMsg extends IChatMsg {
+
+	
+	public OurDataPacketAlgoCmd<?> getCmd();
+
+	public Class<?> getClassIdx();
+	
+	public UUID getUUID();
+}

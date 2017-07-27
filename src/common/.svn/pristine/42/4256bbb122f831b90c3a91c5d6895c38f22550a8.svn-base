@@ -1,0 +1,22 @@
+package common.msg.chat;
+
+import common.IChatServer;
+import common.msg.IChatMsg;
+
+
+/**
+ * This message is sent to all chatservers in the chatroom to notify them to add new comer's chatserver
+ * When implementing it, you should create a IChatServer field for the new chatserver and use it to construct this object
+ * E.g. IChatServer chatStub;
+ *      IAddMeMsg(IChatServer chatStub);
+ * Also there is a getter to get the stub.
+ * 
+ * Implementation advice for AddMeCmd:
+ * Add the sender into the ChatServerList of your Chatroom
+ * 
+ */
+public interface IAddMeMsg extends IChatMsg {
+	
+	public IChatServer getChatStub();
+
+}

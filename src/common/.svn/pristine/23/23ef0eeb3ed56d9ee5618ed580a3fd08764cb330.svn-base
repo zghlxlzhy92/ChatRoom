@@ -1,0 +1,32 @@
+package common.msg.user;
+
+import common.IChatroom;
+import common.msg.IUserMsg;
+
+/**
+ * This message is sent to the user you want to invite to your chatroom
+ *
+ */
+public abstract class AInvite2RoomMsg implements IUserMsg {
+
+	private static final long serialVersionUID = -8147869369315521558L;
+
+	private IChatroom chatroom;
+	
+	/**
+	 * Constructor
+	 * @param cr - The chatroom you want to invite other users
+	 */
+	public AInvite2RoomMsg(IChatroom cr) {
+		chatroom = cr;
+	}
+	
+	/**
+	 * Get the chatroom you want other users to join
+	 * @return The chatroom you want other users to join
+	 */
+	public IChatroom getChatroom() {
+		return chatroom;
+	}
+
+}

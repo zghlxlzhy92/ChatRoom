@@ -1,0 +1,9 @@
+package common.msg.chat;
+
+import common.msg.IChatMsg;
+
+public abstract class AAddCmdMsg implements IChatMsg {
+
+	private static final long serialVersionUID = 650427754380404399L;
+
+}
